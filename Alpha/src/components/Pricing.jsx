@@ -4,12 +4,11 @@ import logo from '../assets/logo.png'
 
 const Pricing = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 p-6">
+    <section className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 p-6">
       {/* Header */}
       <div className="max-w-6xl mx-auto pt-8 pb-16 text-center">
         <div className="flex items-center justify-center mb-8 gap-3">
-                  {/* <div className="w-10 h-10 bg-white/90 rotate-45 shadow-lg"></div> */}
-                  <img src={logo} alt="Alpha" />
+          <img src={logo} alt="Alpha" />
           <span className="text-white text-4xl font-bold">Alpha</span>
         </div>
         <h1 className="text-4xl font-bold text-white mb-4">Choose Your Plan</h1>
@@ -92,10 +91,12 @@ const Pricing = () => {
           <button className="w-full mt-8 bg-purple-600 hover:bg-purple-700 text-white rounded-xl py-3 px-4 transition-all shadow-lg hover:shadow-purple-500/20">
             Upgrade to Pro
           </button>
+          
+          
         </div>
 
         {/* Premium Plan */}
-        <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/10 shadow-xl relative">
+        <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/10 shadow-xl relative transform hover:scale-105 transition-all ">
           <div className="absolute -top-3 -right-3">
             <Crown className="w-8 h-8 text-yellow-500" />
           </div>
@@ -134,15 +135,15 @@ const Pricing = () => {
 
       {/* FAQ or Additional Info */}
       <div className="max-w-2xl mx-auto mt-16 text-center">
-        <p className="text-purple-200 text-sm">
+        <p className="text-purple-200 text-sm ">
           All plans include our core features. Upgrade or downgrade at any time.
-          Need a custom plan?{" "}
-          <button className="text-white hover:text-purple-300 font-medium">
+          Need a custom plan?
+          <button className="text-white hover:text-purple-300 font-medium ml-2">
             Contact us
           </button>
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 
