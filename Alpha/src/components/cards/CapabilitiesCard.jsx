@@ -4,6 +4,7 @@ import capabilities from "../../assets/capabilities.png";
 import { memo } from "react";
 
 
+
 const usablePrompts = [
   { id: 1, info: "Provide information and answer all questions." },
   { id: 2, info: "All Grammar corrections and Language translations." },
@@ -24,6 +25,7 @@ const CapabilitiesItem = ({ info }) => {
 
 const CapabilitiesCard = () => {
   const [shuffled, setShuffled] = useState([]);
+  const [switchScreen, setSwitchScreen] = useState()
 
   useEffect(() => {
     // Create a copy of the prompts to shuffle
@@ -59,6 +61,8 @@ const CapabilitiesCard = () => {
           <CapabilitiesItem key={id} info={info} />
         ))}
       </div>
+
+      
     </section>
   );
 };

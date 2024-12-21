@@ -19,21 +19,21 @@ const UserId = [
 
 const PropsCard = ({ userId, profileImage, name, email }) => {
   return (
-    <div className="border-2 border-gray w-80 h-auto mb-2 ml-5 p-4 bg-purple-900 bg-opacity-90 rounded-md font-serif">
+    <div className="ml-2 mr-2">
       <div key={userId} className="flex gap-5 w-auto mb-5">
         <img src={profileImage} alt={name} className="h-12 w-11" />
         <div className="">
-          <h3 className="mb-1 text-white w-auto text-base font-semibold opacity-90 ">
+          <h3 className="mb-1 text-white  md:w-auto text-base font-semibold opacity-90 ">
             {name}
           </h3>
-          <p className="text-white text-xs font-medium opacity-90 ">{email}</p>
+          <p className="text-white text-xs font-medium opacity-90 w-full">{email}</p>
         </div>
       </div>
 
       <p className="text-white text-xs font-normal opacity-90 text-center">
         You’re currently on a free plan
       </p>
-      <button className="text-white text-xs font-medium w-44 opacity-90 text-center mt-5 bg-[#191E56] ml-12  hover:bg-opacity-50 transition-all transform p-4 rounded-lg">
+      <button className="text-white text-xs font-medium w-40 opacity-90 text-center mt-6 bg-[#191E56] ml-4  hover:bg-opacity-50 transition-all transform p-4 rounded-lg">
         Upgrade plan
       </button>
     </div>
@@ -43,7 +43,7 @@ const PropsCard = ({ userId, profileImage, name, email }) => {
 const UserCard = () => {
   return (
     <section className="">
-      <div className="user-card-container">
+      <div className=" w-auto pt-5 pb-4 pl-5 pr-5 bg-indigo-800 bg-opacity-90 shadow-white shadow-sm">
         {UserId.map(({ userId, profileImage, name, email }) => (
           <PropsCard
             key={userId}
