@@ -4,7 +4,7 @@ import logo from '../assets/logo.png'
 
 const Pricing = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 p-6">
+    <section className="min-h-screen bg-gradient-to-br from-indigo-700 via-indigo-800 to-indigo-900 p-6">
       {/* Header */}
       <div className="max-w-6xl mx-auto pt-8 pb-16 text-center">
         <div className="flex items-center justify-center mb-8 gap-3">

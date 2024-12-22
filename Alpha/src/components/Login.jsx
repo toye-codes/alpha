@@ -9,7 +9,7 @@ const AuthUI = () => {
   const [name, setName] = useState("");
 
   return (
-    <div className="min-h-screen bg-gradient-to-tl from-purple-900 via-purple-900 to-indigo-900 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-gradient-to-tl from-indigo-700 via-indigo-900 to-indigo-900 flex items-center justify-center p-6">
       <div className="w-full max-w-md">
         <div className="flex items-center justify-center mb-8 gap-3">
           <img src={logo} alt="Alpha" />

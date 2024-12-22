@@ -36,12 +36,12 @@ const PromptsCard = () => {
   }, []);
 
   return (
-    <section className="bg-[#3C3B6C] text-center mt-5 w-full max-w-[290px] h-auto ml-5 p-4 rounded-xl shadow-lg">
-      <div className="relative flex flex-col items-center mb-5">
+    <section className="bg-indigo-900 bg-opacity-90 text-center mt-5 w-full max-w-[290px] h-auto ml-5 p-4 rounded-xl shadow-lg">
+      <div className=" flex flex-col items-center mb-5">
         <img
           src={prompt}
           alt="prompt"
-          className="text-center mb-5 w-10 h-20 object-contain"
+          className="text-center mb-5  object-contain"
         />
         <h2 className="text-white font-semibold text-2xl">Prompts</h2>
       </div>

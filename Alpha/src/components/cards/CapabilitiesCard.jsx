@@ -46,8 +46,8 @@ const CapabilitiesCard = () => {
   }, []); // Empty dependency array ensures this runs once on mount
 
   return (
-    <section className="bg-[#3C3B6C] text-center mt-5 w-72 h-auto ml-5 p-4 rounded-xl shadow-white">
-      <div className="relative flex flex-col items-center mb-5">
+    <section className="bg-indigo-900 bg-opacity-90 text-center mt-5 w-72 h-auto ml-5 p-4 rounded-xl shadow-white">
+      <div className=" flex flex-col items-center mb-5">
         <img
           src={capabilities}
           alt="Capabilities"
@@ -61,8 +61,6 @@ const CapabilitiesCard = () => {
           <CapabilitiesItem key={id} info={info} />
         ))}
       </div>
-
-      
     </section>
   );
 };
