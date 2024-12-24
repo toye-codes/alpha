@@ -5,7 +5,7 @@ import prompt from "../assets/prompt.png";
 
 const UsableProps = ({ id, name, image, query }) => {
   return (
-    <div className=" m-5 p-4 rounded-xl  bg-indigo-800 bg-opacity-10 shadow-violet-50 shadow-sm">
+    <div className=" m-5 p-4 rounded-xl  bg-indigo-800 bg-opacity-10 hover:bg-opacity-40 shadow-violet-50 shadow-sm ">
       <div className="flex flex-row gap-5 mb-2">
         <img src={image} alt={name} className="w-10 h-10" />
         <p className="text-white text-base">{name}</p>
@@ -41,7 +41,7 @@ const SmallScreen = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center mt-10">
+    <section className="flex flex-col items-center mt-10 ">
       {autoPrompts.map(({id, name, image, query}) => (
         <UsableProps
           key={id}

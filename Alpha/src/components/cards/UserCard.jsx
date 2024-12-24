@@ -1,5 +1,6 @@
 import usercard from "../../assets/usercard.png";
 import "../../index.css";
+import { useNavigate } from "react-router-dom";
 
 const UserId = [
   {
@@ -12,12 +13,7 @@ const UserId = [
 ];
 
 
-// I should add an input that parses the input in the login field to the usercard
-// Then create two conditions that will be displayed if
-// 1. The user have an account. it will print out the user details
-// 2. The user is using a free version without login in but shows register and login
-
-const PropsCard = ({ userId, profileImage, name, email }) => {
+const PropsCard = ({ userId, profileImage, name, email, onUpgradeClick }) => {
   return (
     <div className="pl-3 pr-3">
       <div key={userId} className="flex gap-5 w-auto mb-5">
@@ -26,14 +22,18 @@ const PropsCard = ({ userId, profileImage, name, email }) => {
           <h3 className="mb-1 text-white  md:w-auto text-base font-semibold opacity-90 ">
             {name}
           </h3>
-          <p className="text-white text-xs font-medium opacity-90 w-full">{email}</p>
+          <p className="text-white text-xs font-medium opacity-90 w-full">
+            {email}
+          </p>
         </div>
       </div>
 
       <p className="text-white text-xs font-normal opacity-90 text-center">
         You’re currently on a free plan
       </p>
-      <button className="text-white text-xs font-medium w-40 opacity-90 text-center mt-6 bg-[#191E56] ml-4  hover:bg-opacity-50 transition-all transform p-3.5 rounded-lg">
+      <button
+        onClick={onUpgradeClick}
+        className="text-white text-xs font-medium w-40 opacity-90 text-center mt-6 bg-[#191E56] ml-4  hover:bg-opacity-50 transition-all transform p-3.5 rounded-lg">
         Upgrade plan
       </button>
     </div>
@@ -41,6 +41,18 @@ const PropsCard = ({ userId, profileImage, name, email }) => {
 };
 
 const UserCard = () => {
+  
+  // Navigating to the pricing page\
+  const navigate = useNavigate();
+
+  const handlePricing = () => {
+    const profile = "free";
+
+    if (profile === "free") {
+      navigate("/pricing");
+    }
+  };
+
   return (
     <section className="">
       <div className=" w-auto p-7 bg-indigo-800 bg-opacity-90 shadow-white shadow-sm">
@@ -51,6 +63,7 @@ const UserCard = () => {
             profileImage={profileImage}
             name={name}
             email={email}
+            onUpgradeClick={handlePricing}
           />
         ))}
       </div>

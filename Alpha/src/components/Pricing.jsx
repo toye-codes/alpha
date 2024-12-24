@@ -2,7 +2,10 @@ import React from "react";
 import { Check, Star, Zap, Crown } from "lucide-react";
 import logo from '../assets/logo.png'
 
+
 const Pricing = () => {
+
+
   return (
     <section className="min-h-screen bg-gradient-to-br from-indigo-700 via-indigo-800 to-indigo-900 p-6">
       {/* Header */}

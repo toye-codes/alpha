@@ -6,42 +6,43 @@ import logo from "../assets/logo.png";
 import send from "../assets/send.png";
 import Navbar from "./NavBar";
 import SmallScreen from "./SmallScreen";
-import LargeScreen from "./LargeSreen"
+import LargeScreen from "./LargeSreen";
+
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false); 
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024); 
   const navRef = useRef();
 
-  // Toggle Navbar visibility
   const toggleNavbar = () => {
     setIsVisible((prev) => !prev);
   };
 
-  // Event to close the Navbar
+
   const closeBar = () => {
     navRef.current ? navRef.current.click() : "";
   };
 
-  // Check screen size and update state
   useEffect(() => {
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 1024);
     };
-
-    // Initial check
     handleResize();
 
-    // Event listener for resizing
     window.addEventListener("resize", handleResize);
-
-    // Cleanup event listener
+  
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+
+
+
+    
+
+
   return (
     <main className="w-screen min-h-screen bg-gradient-to-r from-indigo-900 to-[#1A284A] overflow-hidden">
-      <header className="flex justify-between">
+      <header className="flex justify-between mt-5">
         <nav>
           <div
             className={`min-h-screen w-full grid grid-cols-[1fr_4fr] absolute transition-transform duration-1000 transform ${
@@ -82,7 +83,6 @@ const App = () => {
           </p>
         </div>
 
-        {/* Conditional Rendering for SmallScreen and LargeScreen */}
         <div className="flex flex-col items-center">
           {isLargeScreen ? <LargeScreen /> : <SmallScreen />}
         </div>
@@ -92,13 +92,16 @@ const App = () => {
             <input
               type="text"
               placeholder="Enter your prompt......."
-              className="text-xl bg-transparent text-white outline-none "
+              className="text-xl bg-transparent text-white outline- text-center mt-4"
             />
+              
+            
+
             <button>
               <img src={send} alt="send" className="w-14" />
             </button>
           </div>
-          <p className="text-white mt-5 mb-5">
+          <p className="text-white text-center w-80 lg:w-fit mt-5 mb-5 ">
             Alpha might make mistakes. Please ensure you cross check important
             information.
           </p>

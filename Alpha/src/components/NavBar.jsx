@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 import { MessageSquare, Search, CreditCard, LifeBuoy, Heart, Settings, Info, X } from "lucide-react";
 
 
+
 const Navbar = React.forwardRef((props, ref) => {
   const navItems = [
     { icon: <MessageSquare size={17} />, text: "Chat" },
